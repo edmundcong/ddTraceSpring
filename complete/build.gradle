@@ -13,6 +13,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+
 bootJar {
     baseName = 'gs-rest-service'
     version =  '0.1.0'
@@ -27,6 +28,10 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'com.datadoghq', name: 'dd-trace-api', version: "0.27.0"
+    compile group: 'com.datadoghq', name: 'dd-trace-ot', version: "0.27.0"
+    compile group: 'io.opentracing', name: 'opentracing-api', version: '0.32.0'
+    compile group: 'io.opentracing', name: 'opentracing-util', version: "0.31.0"
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
 }
