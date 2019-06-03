@@ -5,5 +5,5 @@ Make sure your Datadog Agent is running and if <6.10 make sure your trace agent 
 
 ## Caveats:
 
-* Make sure you have gs-rest-service-/<version number/> inside build/libs/ -- i've included this *on purpose*
+* Make sure you have gs-rest-service-`<version number>` inside build/libs/ -- i've included this *on purpose*
 * also make sure that build.gradle has the necessary dependencies to compile (dd-trace-api, dd-trace-ot, and opentracing-api, opentracing-util)
